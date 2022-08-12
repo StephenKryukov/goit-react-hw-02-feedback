@@ -1,0 +1,10 @@
+.button {
+  background-color: beige;
+  border: 1px solid orange;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: burlywood;
+}

@@ -31,24 +31,37 @@ class App extends Component {
     const options = Object.keys(this.state);
 
     return (
-      <Section title="Please leave your feedback">
-        <FeedbackOptions
-          options={options}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
-        <Section title="Statistics"></Section>
-        {this.countTotalFeedback() > 0 ? (
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
+      <div
+        style={{
+          display: 'inline-flex',
+          textAlign: 'center',
+          margin: '20px',
+          paddingLeft: '10px',
+          paddingRight: '10px',
+          color: '#010101',
+          border: '2px solid black',
+          borderRadius: '6px',
+        }}
+      >
+        <Section title="Please leave your feedback">
+          <FeedbackOptions
+            options={options}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
-        ) : (
-          <Notification message="There is no feedback" />
-        )}
-      </Section>
+          <Section title="Statistics"></Section>
+          {this.countTotalFeedback() > 0 ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
+        </Section>
+      </div>
     );
   }
 }
