@@ -48,7 +48,7 @@ class App extends Component {
             options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
-          <Section title="Statistics"></Section>
+          <Section title="Statistics" />
           {this.countTotalFeedback() > 0 ? (
             <Statistics
               good={good}
