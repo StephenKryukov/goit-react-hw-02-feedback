@@ -34,6 +34,7 @@ class App extends Component {
       <div
         style={{
           display: 'inline-flex',
+          flexDirection: 'column',
           textAlign: 'center',
           margin: '20px',
           paddingLeft: '10px',
@@ -48,7 +49,8 @@ class App extends Component {
             options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
-          <Section title="Statistics" />
+        </Section>
+        <Section title="Statistics">
           {this.countTotalFeedback() > 0 ? (
             <Statistics
               good={good}
